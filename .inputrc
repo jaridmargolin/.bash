@@ -2,16 +2,20 @@
 
 # ##############################################################################
 #
-# all.sh
+# .inputrc
 #
-# Sources all sibling shell files. If you would rather, feel free to only
-# source individual files.
+# Individual readline init file.
 #
 # ##############################################################################
 
 
 # ------------------------------------------------------------------------------
-# IMPORT
+# ADDITIONAL HELPERS
 # ------------------------------------------------------------------------------
 
-runSiblings ${BASH_SOURCE[0]} "*.sh"
+# Search through history
+# https://coderwall.com/p/oqtj8w/the-single-most-useful-thing-in-bash
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
+set show-all-if-ambiguous on

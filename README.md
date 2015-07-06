@@ -1,13 +1,9 @@
 # _bash
 
-Handy bash shell aliases and functions that I've written/collected over the years
+Handy bash shell aliases and functions that I've written/collected over the years.
 
 # To Install
 
-Just clone this repository into some directory, and then source it in your `.bash_aliases` or `.bash_profile` file
+Clone/Download the repo to your desired location. Navigate to directory and run `_install`. The source code for `_install` is very simple. Take a look if you would like to see what is happening behind the scenes.
 
-    . /path/to/repo/all.sh
-
-If you only want specific file, say just the utility functions:
-
-    . /path/to/repo/util.sh
+**note**: The `_install` script will create a symlink from the repo `.bash_profile` to `~/.bash_profile`. If you have a pre existing `~/.bash_profile` rename it to `~/.bash_user.sh`.

@@ -30,7 +30,9 @@ alias ~="cd ~"                            # Go Home
 alias path='echo -e ${PATH//:/\\n}'       # Echo all executable Paths
 
 cd() { builtin cd "$@"; ls; }             # Always list directory contents upon 'cd'
-mcd () { mkdir -p "$1" && cd "$1"; }      # mcd: Makes new Dir and jumps inside
+mcd () { mkdir -p "$1" && cd "$1"; }      # Makes new Dir and jumps inside
+cpwd() { pwd | xargs echo -n | pbcopy; }  # Copy the current working directory
+
 
 # Extract most know archives with one command
 # source: http://natelandau.com/my-mac-osx-bash_profile/

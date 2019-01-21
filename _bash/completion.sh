@@ -2,16 +2,15 @@
 
 # ##############################################################################
 #
-# all.sh
+# completion.sh
 #
-# Sources all sibling shell files. If you would rather, feel free to only
-# source individual files.
+# Wires up the installed bash-completion (`brew install bash-completion`)
 #
 # ##############################################################################
 
 
 # ------------------------------------------------------------------------------
-# IMPORT
+# BASH COMPLETION
 # ------------------------------------------------------------------------------
 
-runSiblings ${BASH_SOURCE[0]} "*.sh"
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion

@@ -15,7 +15,7 @@
 
 # general
 alias gs="git status"
-alias gd="git diff"
+alias gd="git diff -- ':!package-lock.json' ':!yarn.lock'"
 alias gpo="git push origin"
 alias gro="git fetch origin; git rebase"
 

@@ -12,17 +12,16 @@
 
 # 1. Install _bash files
 # ===
-# bm install
+bm install
 
 # 2. Symblink _dotfiles
 # ===
 CUR_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" > /dev/null && pwd )"
 for f in "$CUR_DIR"/_dotfiles/.*; do
-  # ln $SRC_DIR/.inputrc ~/.inputrc
-  [ -f $f ] && echo "$f";
+  [ -f $f ] && ln $f ~/$(basename $f);
 done
 
 
 # 3. Source ~/.bash_profile
 # ===
-# . ~/.bash_profile
+. ~/.bash_profile
